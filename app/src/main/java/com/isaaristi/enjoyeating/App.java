@@ -15,7 +15,7 @@ public class App extends Application{
     public void onCreate() {
         super.onCreate();
 
-        retrofit = new Retrofit.Builder().baseUrl("https://test-isabel-restaurante.herokuapp.com")
+        retrofit = new Retrofit.Builder().baseUrl("https://test-isabel-restaurante.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create(new Gson())).build();
     }
 }

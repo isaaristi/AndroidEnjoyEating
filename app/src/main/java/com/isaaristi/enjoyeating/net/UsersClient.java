@@ -6,10 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
-/**
- * Created by Isabel on 19/06/17.
- */
-
 public interface UsersClient {
 
     @POST("users/signin")

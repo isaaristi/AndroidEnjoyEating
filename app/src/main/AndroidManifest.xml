@@ -26,7 +26,8 @@
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".DetallesActivity" />
+        <activity android:name=".DetallesActivity"
+            android:theme="@style/NoActionBar"/>
         <activity android:name=".MenuActivity" />
         <activity android:name=".ResenaActivity" />
     </application>
