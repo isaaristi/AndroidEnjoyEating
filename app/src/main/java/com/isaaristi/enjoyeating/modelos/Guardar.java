@@ -4,6 +4,13 @@ public class Guardar {
 
     String idUs, imagen, nombre, placeid;
 
+    public Guardar(String idUs, String imagen, String nombre, String placeid) {
+        this.idUs = idUs;
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.placeid = placeid;
+    }
+
     public String getIdUs() {
         return idUs;
     }

@@ -2,6 +2,7 @@ package com.isaaristi.enjoyeating;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.databinding.DataBindingUtil;
 import android.widget.Toast;
@@ -30,11 +31,11 @@ public class RegisterActivity extends AppCompatActivity implements Callback<Regi
     }
 
     public void principal () {
-        String username = binding.username.getText().toString();
+        String usern = binding.username.getText().toString();
         String correo = binding.correo.getText().toString();
-        String password = binding.password.getText().toString();
+        String pass= binding.password.getText().toString();
 
-        Users user = new Users(username, correo, password);
+        Users user = new Users(usern, correo, pass);
 
         Call<RegistroResponse> request = client.registrar(user);
         request.enqueue(this);
@@ -53,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity implements Callback<Regi
             }else if (registroResponse.isExists()){
                 Toast.makeText(this, R.string.register_exist, Toast.LENGTH_SHORT).show();
             }else {
-                Toast.makeText(this, R.string.reister_no, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.register_exist, Toast.LENGTH_SHORT).show();
             }
 
         }else{
