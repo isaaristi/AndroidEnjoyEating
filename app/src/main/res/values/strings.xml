@@ -38,4 +38,10 @@
     <string name="open_menu">Menu abierto</string>
     <string name="close_menu">Menu cerrado</string>
     <string name="ingredientes">Ingredientes</string>
+    <string name="bueno">Haz guardado el restaurante</string>
+    <string name="malo">No se pudo realizar esta accion</string>
+    <string name="guardarbien">El restaurante ha sido guardado con exito</string>
+    <string name="guardarmal">Error al guardar el restaurante</string>
+    <string name="guardarerror">Error con el servidor</string>
+    <string name="erorrrr">Error en el servidor</string>
 </resources>

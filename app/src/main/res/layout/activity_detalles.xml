@@ -57,7 +57,8 @@
                 android:layout_weight="1"
                 android:text="@string/guardar"
                 android:textColor="@color/rojo"
-                android:background="@color/colorAccent" />
+                android:background="@color/colorAccent"
+                android:onClick="@{() -> handler.guardar()}"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -162,6 +163,7 @@
                 android:text="@string/ver_menu"
                 android:textColor="@color/colorAccent"
                 android:background="@color/rojo"
+
                 />
 
             <Button

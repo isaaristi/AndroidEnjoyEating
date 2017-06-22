@@ -1,12 +1,16 @@
 package com.isaaristi.enjoyeating.modelos;
 
-/**
- * Created by Isabel on 13/06/17.
- */
-
 public class Estuve {
 
+
     String idUs, imagen, nombre, placeid;
+
+    public Estuve(String idUs, String imagen, String nombre, String placeid) {
+        this.idUs = idUs;
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.placeid = placeid;
+    }
 
     public String getIdUs() {
         return idUs;

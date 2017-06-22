@@ -29,9 +29,6 @@ import retrofit2.Response;
 
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class GuardarFragment extends Fragment {
 
     FragmentGuardarBinding binding;
