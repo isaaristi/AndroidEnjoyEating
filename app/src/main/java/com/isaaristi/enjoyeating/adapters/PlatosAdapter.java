@@ -19,7 +19,7 @@ public class PlatosAdapter extends RecyclerView.Adapter<PlatosAdapter.PlatosHold
     LayoutInflater inflater;
     List<Menu> data;
 
-    public PlatosAdapter(LayoutInflater inflater, List<Menu> data) {
+    public PlatosAdapter(LayoutInflater inflater, List<Menu> data, PlatosFragment platosFragment) {
         this.inflater = inflater;
         this.data = data;
     }
