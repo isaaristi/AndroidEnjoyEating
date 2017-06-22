@@ -14,6 +14,9 @@ import com.isaaristi.enjoyeating.R;
  */
 public class GuardarFragment extends Fragment {
 
+    public static GuardarFragment instance() {
+        return new GuardarFragment();
+    }
 
     public GuardarFragment() {
         // Required empty public constructor

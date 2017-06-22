@@ -3,7 +3,9 @@ package com.isaaristi.enjoyeating.modelos;
 public class Tipo {
 
 
-    String nombre, imagen, valor;
+    String nombre;
+    int imagen;
+    String valor;
 
     public Tipo() {
         this.nombre = nombre;
@@ -19,7 +21,7 @@ public class Tipo {
         this.nombre = nombre;
     }
 
-    public String getImagen() {
+    public int getImagen() {
         return imagen;
     }
 

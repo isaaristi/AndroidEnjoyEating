@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:title="@string/nav_home"
+        android:icon="@drawable/ic_home"/>
+
+    <item android:id="@+id/nav_tipos"
+        android:title="@string/nav_tipos"
+        android:icon="@drawable/ic_tipos"/>
+
+    <item android:id="@+id/nav_platos"
+        android:title="@string/nav_platos"
+        android:icon="@drawable/ic_pizza"/>
+
+    <item android:title="@string/nav_perfil">
+        <menu>
+            <item android:id="@+id/nav_guardar"
+                android:title="@string/nav_guardar"
+                android:icon="@drawable/ic_bookmark"/>
+
+            <item android:id="@+id/nav_estuve"
+                android:title="@string/nav_estuve"
+                android:icon="@drawable/ic_check"/>
+
+            <item android:id="@+id/nav_logout"
+                android:title="@string/nav_logout"
+                android:icon="@drawable/ic_power"/>
+        </menu>
+    </item>
+
+</menu>

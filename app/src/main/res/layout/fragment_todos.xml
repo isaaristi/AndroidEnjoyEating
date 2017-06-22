@@ -4,7 +4,6 @@
     >
 
     <data>
-            type=""
     </data>
     <FrameLayout
         android:layout_width="match_parent"

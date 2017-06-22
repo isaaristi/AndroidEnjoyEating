@@ -14,6 +14,9 @@ import com.isaaristi.enjoyeating.R;
  */
 public class EstuveFragment extends Fragment {
 
+    public static EstuveFragment instance() {
+        return new EstuveFragment();
+    }
 
     public EstuveFragment() {
         // Required empty public constructor

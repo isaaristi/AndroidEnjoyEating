@@ -15,7 +15,7 @@
     <string name="error_login">Usuario o contraseña incorrecta, por favor intenta de nuevo</string>
     <string name="login_error">El usuario no se encuentra registrado</string>
     <string name="error">Error al conectarse con el servidor</string>
-    <string name="vacio">Los conpos de usuario y/o contraseña estan vacios. Por favor ingresalos.</string>
+    <string name="vacio">Los campos de usuario y/o contraseña estan vacios. Por favor ingresalos.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -27,5 +27,14 @@
     <string name="ver_menu">Ver menu</string>
     <string name="ver_mapa">Ver mapa</string>
 
+    <string name="nav_home">Inicio</string>
+    <string name="nav_tipos">Tipos</string>
+    <string name="nav_platos">Platos</string>
+    <string name="nav_guardar">Guardados</string>
+    <string name="nav_estuve">Ya Estuve</string>
+    <string name="nav_logout">Cerrar sesion</string>
+    <string name="nav_perfil">Perfil</string>
 
+    <string name="open_menu">Menu abierto</string>
+    <string name="close_menu">Menu cerrado</string>
 </resources>

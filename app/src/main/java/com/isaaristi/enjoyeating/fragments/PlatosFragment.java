@@ -14,6 +14,9 @@ import com.isaaristi.enjoyeating.R;
  */
 public class PlatosFragment extends Fragment {
 
+    public static PlatosFragment instance() {
+        return new PlatosFragment();
+    }
 
     public PlatosFragment() {
         // Required empty public constructor

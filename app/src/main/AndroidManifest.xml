@@ -29,9 +29,6 @@
         <activity android:name=".DetallesActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ResenaActivity" />
-        <activity android:name=".RestauranteActivity" />
-        <activity android:name=".PlatosActivity" />
-        <activity android:name=".PerfilActivity"></activity>
     </application>
 
 </manifest>

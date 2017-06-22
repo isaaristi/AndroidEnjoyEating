@@ -9,18 +9,25 @@ import android.view.ViewGroup;
 
 import com.isaaristi.enjoyeating.R;
 import com.isaaristi.enjoyeating.databinding.TemplateRestauranteBinding;
+import com.isaaristi.enjoyeating.fragments.TodosFragment;
 import com.isaaristi.enjoyeating.modelos.Restaurante;
 
 import java.util.List;
 
 public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.TodosHolder>{
 
+    public interface onRestauranteListener {
+        void onRestauranteClick(int position);
+    }
+
     LayoutInflater inflater;
     List<Restaurante> data;
+    onRestauranteListener listener;
 
-    public TodosAdapter(LayoutInflater inflater, List<Restaurante> data) {
+    public TodosAdapter(LayoutInflater inflater, List<Restaurante> data, onRestauranteListener listener) {
         this.inflater = inflater;
         this.data = data;
+        this.listener = listener;
     }
 
     @Override
@@ -32,6 +39,8 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.TodosHolder>
     @Override
     public void onBindViewHolder(TodosHolder holder, int position) {
         holder.binding.setRestaurantes(data.get(position));
+        holder.binding.card.setTag(position);
+        holder.binding.setHandler(this);
     }
 
     @Override
@@ -39,6 +48,14 @@ public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.TodosHolder>
         return data.size();
     }
 
+    public void onItemClick (int position) {
+        listener.onRestauranteClick(position);
+    }
+
+    public void setData(List<Restaurante> data) {
+        this.data = data;
+        notifyDataSetChanged();
+    }
 
     //region viewHolders
     static class TodosHolder extends RecyclerView.ViewHolder {

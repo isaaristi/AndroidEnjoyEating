@@ -14,7 +14,9 @@ import com.isaaristi.enjoyeating.R;
  */
 public class TiposFragment extends Fragment {
 
-
+    public static TiposFragment instance() {
+        return new TiposFragment();
+    }
     public TiposFragment() {
         // Required empty public constructor
     }
