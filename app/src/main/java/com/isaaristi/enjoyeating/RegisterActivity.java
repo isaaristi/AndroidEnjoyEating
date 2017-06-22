@@ -1,5 +1,6 @@
 package com.isaaristi.enjoyeating;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.databinding.DataBindingUtil;
@@ -29,9 +30,9 @@ public class RegisterActivity extends AppCompatActivity implements Callback<Regi
     }
 
     public void principal () {
-        String username = binding.username.getEditText().getText().toString();
-        String correo = binding.correo.getEditText().getText().toString();
-        String password = binding.password.getEditText().getText().toString();
+        String username = binding.username.getText().toString();
+        String correo = binding.correo.getText().toString();
+        String password = binding.password.getText().toString();
 
         Users user = new Users(username, correo, password);
 
@@ -46,6 +47,8 @@ public class RegisterActivity extends AppCompatActivity implements Callback<Regi
             RegistroResponse registroResponse = response.body();
             if (registroResponse.isSuccess()){
                 Toast.makeText(this, R.string.register_success, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 finish();
             }else if (registroResponse.isExists()){
                 Toast.makeText(this, R.string.register_exist, Toast.LENGTH_SHORT).show();

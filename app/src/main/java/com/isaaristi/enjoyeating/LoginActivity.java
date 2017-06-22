@@ -49,8 +49,8 @@ public class LoginActivity extends AppCompatActivity implements Callback<SimpleR
     }
 
     public void goToMain() {
-        String username = binding.username.getEditText().getText().toString();
-        String password = binding.password.getEditText().getText().toString();
+        String username = binding.username.getText().toString();
+        String password = binding.password.getText().toString();
 
         if ((username.equals("")) || (password.equals(""))) {
             Toast.makeText(this, R.string.vacio, Toast.LENGTH_SHORT).show();

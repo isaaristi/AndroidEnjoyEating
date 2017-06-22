@@ -6,9 +6,6 @@
     >
 
     <data>
-        <variable
-            name="user"
-            type="com.isaaristi.enjoyeating.modelos.Users"/>
 
         <variable
             name="handler"
@@ -56,7 +53,6 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/username"
                 android:textColorHint="@color/rojo">
 
                 <android.support.design.widget.TextInputEditText
@@ -64,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:hint="@string/nombre_de_usuario"
-                    android:text="@{user.username}"
+                    android:id="@+id/username"
                     />
 
             </android.support.design.widget.TextInputLayout>
@@ -72,7 +68,6 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/correo"
                 android:textColorHint="@color/rojo">
 
                 <android.support.design.widget.TextInputEditText
@@ -80,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:hint="@string/correo"
-                    android:text="@{user.correo}"
+                    android:id="@+id/correo"
                     />
 
             </android.support.design.widget.TextInputLayout>
@@ -88,7 +83,6 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/password"
                 android:textColorHint="@color/rojo">
 
                 <android.support.design.widget.TextInputEditText
@@ -96,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:hint="@string/contrase_a"
-                    android:text="@{user.password}"
+                    android:id="@+id/password"
                     />
 
             </android.support.design.widget.TextInputLayout>
