@@ -1,9 +1,5 @@
 package com.isaaristi.enjoyeating.modelos;
 
-/**
- * Created by Isabel on 13/06/17.
- */
-
 public class Guardar {
 
     String idUs, imagen, nombre, placeid;

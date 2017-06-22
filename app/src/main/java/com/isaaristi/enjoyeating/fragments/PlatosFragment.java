@@ -25,7 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PlatosFragment extends Fragment {
+public class PlatosFragment extends Fragment implements PlatosAdapter.onPlatosListener{
 
     FragmentPlatosBinding binding;
     PlatosAdapter adapter;
@@ -76,5 +76,10 @@ public class PlatosFragment extends Fragment {
                 t.printStackTrace();
             }
         });
+    }
+
+    @Override
+    public void onPlatosClick(int position) {
+
     }
 }

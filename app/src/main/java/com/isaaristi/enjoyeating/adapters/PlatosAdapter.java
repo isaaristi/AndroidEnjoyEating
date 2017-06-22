@@ -16,14 +16,19 @@ import java.util.List;
 
 public class PlatosAdapter extends RecyclerView.Adapter<PlatosAdapter.PlatosHolder>{
 
-    LayoutInflater inflater;
-    List<Menu> data;
-
-    public PlatosAdapter(LayoutInflater inflater, List<Menu> data, PlatosFragment platosFragment) {
-        this.inflater = inflater;
-        this.data = data;
+    public interface onPlatosListener {
+        void onPlatosClick (int position);
     }
 
+    LayoutInflater inflater;
+    List<Menu> data;
+    onPlatosListener listener;
+
+    public PlatosAdapter(LayoutInflater inflater, List<Menu> data, onPlatosListener listener) {
+        this.inflater = inflater;
+        this.data = data;
+        this.listener = listener;
+    }
 
     @Override
     public PlatosHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,6 +40,7 @@ public class PlatosAdapter extends RecyclerView.Adapter<PlatosAdapter.PlatosHold
     public void onBindViewHolder(PlatosHolder holder, int position) {
         holder.binding.setMenu(data.get(position));
         holder.binding.card.setTag(position);
+        holder.binding.setHandler(this);
     }
 
     @Override
@@ -47,8 +53,9 @@ public class PlatosAdapter extends RecyclerView.Adapter<PlatosAdapter.PlatosHold
         notifyDataSetChanged();
     }
 
-
-
+    public void onItemClick (int position) {
+        listener.onPlatosClick(position);
+    }
 
     static class PlatosHolder extends RecyclerView.ViewHolder {
         TemplatePlatosBinding binding;
