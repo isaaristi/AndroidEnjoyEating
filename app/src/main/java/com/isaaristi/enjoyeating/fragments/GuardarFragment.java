@@ -27,6 +27,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.MODE_PRIVATE;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -53,6 +55,7 @@ public class GuardarFragment extends Fragment {
         adapter = new GuardarAdapter(getLayoutInflater(null), new ArrayList<Guardar>(), this);
         binding.recycler.setAdapter(adapter);
         binding.recycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        preferences = this.getActivity().getSharedPreferences(Preference.PREFERENCE_NAME, MODE_PRIVATE);
 
         client = App.retrofit.create(GuardarClient.class);
 
@@ -66,8 +69,9 @@ public class GuardarFragment extends Fragment {
     }
 
     private void loadGuardar() {
-        String idUs = preferences.getString(Preference.KEY_USERNAME, "");
-        Call<List<Guardar>> request = client.all(idUs);
+
+        String id = preferences.getString(Preference.KEY_USERNAME, "");
+        Call<List<Guardar>> request = client.all(id);
         request.enqueue(new Callback<List<Guardar>>() {
             @Override
             public void onResponse(Call<List<Guardar>> call, Response<List<Guardar>> response) {
