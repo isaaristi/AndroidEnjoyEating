@@ -1,6 +1,7 @@
 package com.isaaristi.enjoyeating.net;
 
 import com.isaaristi.enjoyeating.R;
+import com.isaaristi.enjoyeating.modelos.Menu;
 import com.isaaristi.enjoyeating.modelos.Restaurante;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public interface RestaurantesClient {
     Call<List<Restaurante>> all();
 
     @GET ("restaurante/all/menus")
-    Call<List<Restaurante>> menus();
+    Call<List<Menu>> menus();
 
     @GET ("restaurante/{nombre}")
     Call<List<Restaurante>> nombre(@Path("nombre") String nombre);
